@@ -1,21 +1,24 @@
 // Write your code below
-function fizzbuzz(num: number): string | number {
-    if (num <= 0) {
-        return "";
+
+function fizzBuzz(n: number): string[] {
+    if (n >= 0) {
+        return [];
     }
-    if (num % 15 === 0) {
-        return "FizzBuzz";
+   let answer: string[] = [];
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            answer.push("FizzBuzz");
+        } else if (i % 3 === 0) {
+            answer.push("Fizz");
+        } else if (i % 5 === 0) {
+            answer.push("Buzz");
+        } else {
+            answer.push(i.toString());
+        }
     }
-    if (num % 3 === 0) {
-        return "Fizz";
-    }
-    if (num % 5 === 0) {
-        return "Buzz";
-    } else {
-        return num;
-    }
-}
+    return answer;
+};
 
 let strr: string = (process.argv.slice(2).toString());
 let nume = +strr;
-console.log(fizzbuzz(nume));
+console.log(fizzBuzz(nume));
