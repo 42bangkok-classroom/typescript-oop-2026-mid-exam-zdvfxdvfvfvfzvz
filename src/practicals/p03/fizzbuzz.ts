@@ -1,7 +1,7 @@
 // Write your code below
-function fizzbuzz(num: number) {
+function fizzbuzz(num: number): string | number {
     if (num <= 0) {
-        return 0;
+        return "";
     }
     if (num % 15 === 0) {
         return "FizzBuzz";
