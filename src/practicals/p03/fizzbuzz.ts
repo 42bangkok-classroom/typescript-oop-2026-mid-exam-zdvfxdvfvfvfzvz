@@ -1,6 +1,6 @@
 // Write your code below
 
-function fizzBuzz(n: number): (string|number)[] {
+export function fizzBuzz(n: number): (string|number)[] {
     if (n <= 0) {
         return [];
     }
@@ -18,7 +18,3 @@ function fizzBuzz(n: number): (string|number)[] {
     }
     return answer;
 };
-
-let strr: string = (process.argv.slice(2).toString());
-let nume = +strr;
-console.log(fizzBuzz(nume));
