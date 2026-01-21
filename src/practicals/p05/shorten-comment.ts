@@ -4,7 +4,8 @@ export function shortenComment(comment: string): string {
   // Write your code below
   const words = comment.split(" ");
   const filtered = words.filter((word) => 4 < word.length);
-  const out = filtered.join(" ");
+  const filtered2 = words.filter((word) => 11 > word.length);
+  const out = filtered2.join(" ");
   return out;
 }
 
