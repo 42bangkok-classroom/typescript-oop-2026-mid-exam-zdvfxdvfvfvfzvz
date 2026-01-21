@@ -5,19 +5,19 @@ function grading(grade: number) {
         return "Invalid input"
     }
     if (grade <= 49) {
-        return "F";
+        return "Grade is F";
     }
     if (grade <= 59) {
-        return "D";
+        return "Grade is D";
     }
     if (grade <= 69) {
-        return "C";
+        return "Grade is C";
     }
     if (grade <= 79) {
-        return "B";
+        return "Grade is B";
     }
     if (grade <= 100) {
-        return "A";
+        return "Grade is A";
     } else {
         return "Invalid input";
     }
