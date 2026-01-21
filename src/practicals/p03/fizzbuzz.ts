@@ -1,7 +1,7 @@
 // Write your code below
 
 function fizzBuzz(n: number): string[] {
-    if (n >= 0) {
+    if (n <= 0) {
         return [];
     }
    let answer: string[] = [];
