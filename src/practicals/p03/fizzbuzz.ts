@@ -1,10 +1,10 @@
 // Write your code below
 
-function fizzBuzz(n: number): string[] {
+function fizzBuzz(n: number): (string|number)[] {
     if (n <= 0) {
         return [];
     }
-   let answer: string[] = [];
+   let answer: (string|number)[] = [];
     for (let i = 1; i <= n; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
             answer.push("FizzBuzz");
@@ -13,7 +13,7 @@ function fizzBuzz(n: number): string[] {
         } else if (i % 5 === 0) {
             answer.push("Buzz");
         } else {
-            answer.push(i.toString());
+            answer.push(i);
         }
     }
     return answer;
