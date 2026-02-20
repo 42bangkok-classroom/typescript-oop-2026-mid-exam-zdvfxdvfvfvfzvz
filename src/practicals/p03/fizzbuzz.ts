@@ -1,25 +1,28 @@
 // Write your code below
 
-export function run(input: string | undefined): void {
-    if (input === undefined) return;
+type Logger = (value: any) => void;
+
+export function run(input: string | undefined, logger: Logger = console.log): Logger {
+    if (input === undefined) return logger;
     const n = Number(input);
-    if (!Number.isInteger(n) || n <= 0) return;
-    fizzBuzz(n);
+    if (!Number.isInteger(n) || n <= 0) return logger;
+    fizzBuzz(n, logger);
+    return logger;
 }
 
-export function fizzBuzz(n: number): void {
+export function fizzBuzz(n: number, logger: Logger = console.log): void {
     if (n <= 0) {
         return;
     }
     for (let i = 1; i <= n; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
-            console.log("FizzBuzz");
+            logger("FizzBuzz");
         } else if (i % 3 === 0) {
-            console.log("Fizz");
+            logger("Fizz");
         } else if (i % 5 === 0) {
-            console.log("Buzz");
+            logger("Buzz");
         } else {
-            console.log(i);
+            logger(i);
         }
-    };
-};
+    }
+}
