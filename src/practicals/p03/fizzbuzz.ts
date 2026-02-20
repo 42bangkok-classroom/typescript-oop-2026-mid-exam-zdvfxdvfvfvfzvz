@@ -1,5 +1,12 @@
 // Write your code below
 
+export function run(input: string | undefined): void {
+    if (input === undefined) return;
+    const n = Number(input);
+    if (!Number.isInteger(n) || n <= 0) return;
+    fizzBuzz(n);
+}
+
 export function fizzBuzz(n: number): void {
     if (n <= 0) {
         return;

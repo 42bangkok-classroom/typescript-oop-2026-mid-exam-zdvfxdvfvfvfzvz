@@ -29,7 +29,7 @@ if (args.length !== 1) {
 } else {
     const grade = parseFloat(args[0]);
     if (isNaN(grade)) {
-        console.log("Please provide a valid number for the grade.");
+        console.log("Invalid input");
     } else {
         console.log(grading(grade));
     }
