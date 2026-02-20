@@ -5,11 +5,10 @@ interface Person {
 }
 
 function sortPersons(persons: Person[]): Person[] {
-  const filteredPerson = persons.filter(user => 
-  user.firstName.startsWith("") || user.lastName?.startsWith("") || user.age > 100 || user.age > 0);
-  const sortByAge = [...filteredPerson].sort((a, b) => b.age - a.age);
-  const sortByName = [...customers].sort((a, b) => a.firstName.localeCompare(b.lastName));
-  const sortedByLastname = [...customers].sort((a, b) => b.lastName - a.lastName);
+  const filteredPerson = persons.filter(user =>
+    !!user.firstName && user.age !== undefined && user.age >= 0 && user.age <= 100
+  );
+  const result = [...filteredPerson].sort((a, b) => a.firstName!.localeCompare(b.firstName!));
   return result;
 }
 
