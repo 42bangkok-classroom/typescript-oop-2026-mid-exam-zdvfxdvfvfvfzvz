@@ -10,6 +10,7 @@
     "noImplicitReturns": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "types": ["node"],
     "strictPropertyInitialization": true,
     "resolveJsonModule": true,
     "skipLibCheck": true
