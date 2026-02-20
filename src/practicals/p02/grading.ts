@@ -23,6 +23,14 @@ function grading(grade: number) {
     }
 }
 
-let str: string = (process.argv.slice(2).toString());
-let num = +str;
-console.log(grading(num));
+const args: string[] = process.argv.slice(2);
+if (args.length !== 1) {
+    console.log("Please provide exactly one argument for the grade.");
+} else {
+    const grade = parseFloat(args[0]);
+    if (isNaN(grade)) {
+        console.log("Please provide a valid number for the grade.");
+    } else {
+        console.log(grading(grade));
+    }
+}

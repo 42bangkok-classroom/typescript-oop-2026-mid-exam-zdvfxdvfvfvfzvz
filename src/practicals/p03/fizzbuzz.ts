@@ -1,20 +1,19 @@
 // Write your code below
 
-export function fizzBuzz(n: number): (string|number)[] {
+export function fizzBuzz(n: number): void {
     if (n <= 0) {
-        return [];
+        return;
     }
    let answer: (string|number)[] = [];
     for (let i = 1; i <= n; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
-            answer.push("FizzBuzz");
+            console.log("FizzBuzz");
         } else if (i % 3 === 0) {
-            answer.push("Fizz");
+            console.log("Fizz");
         } else if (i % 5 === 0) {
-            answer.push("Buzz");
+            console.log("Buzz");
         } else {
-            answer.push(i);
+            console.log(i);
         }
-    }
-    return answer;
+    };
 };
